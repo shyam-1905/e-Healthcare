@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900');
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background:black;
+}
+h1{
+    color: silver;
+    text-align: center;
+    text-decoration: snow;
+}
+.container
+{
+  width: 1200px;
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 40px;
+}
+.container .box
+{
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px;
+  background:silver;
+  overflow: hidden;
+  break-inside: avoid;
+  box-shadow:rgba(,022,0,0.5);
+}
+.container .box img
+{
+  max-width: 100%;
+}
+.container .box h2
+{
+  margin: 10px 0 0;
+  padding: 0;
+  font-size: 20px;
+}
+.container .box p
+{
+  margin: 0;
+  padding: 0 0 10px;
+  font-size: 16px;
+}
+@media (max-width: 1200px)
+{
+  .container
+  {
+    columns: 3;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    padding: 20px 20px 20px 0;
+  }
+}
+
+nav
+{
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,.8);
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    position: sticky;
+    top: 0;
+}
+nav ul
+{
+    display: flex;
+    margin: 0;
+    padding: 0 100px;
+    float: right;
+}
+nav ul li
+{
+    list-style: none;
+}
+
+nav ul li a
+{
+    display: block;
+    color: #fff;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 50px;
+}
+nav ul li ul
+{
+	position: absolute;
+	top: 44px;
+	left:56%;
+	background: #000;
+	display: block;
+	width: 220px;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+nav ul li:hover ul
+{
+	opacity: 1;
+	visibility: visible;
+}
+nav ul li ul li
+{
+	border-right: none;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+nav ul li a:hover,
+nav ul li a.active
+nav ul li ul  a:hover,
+nav ul li ul  a.active
+{
+    background: #f00;    
+}
+@media (max-width: 768px)
+{
+  .container
+  {
+    columns: 2;
+  }
+}
+@media (max-width: 480px)
+{
+  .container
+  {
+    columns: 1;
+  }
+}
